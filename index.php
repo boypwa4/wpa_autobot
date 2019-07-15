@@ -18,7 +18,7 @@
 			  switch($events['message']['type']){
 				  case'text':
 				  	$replyToken = $events['replyToken'];
-					$respMessage = 'สวัสดี'.$events['message']['type'];
+					$respMessage = 'สวัสดี'.$events['message']['text'];
 					
 					$httpClient = new CurlHTTPClient($channel_token);
 					$bot = new LINEBot($httpClient, array('channel_secret' => $channel_secret));
